@@ -1,0 +1,262 @@
+/* Importacao da fonte do google fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Public+Sans:wght@300;400;800&display=swap');
+
+body{
+    font-family: 'Public Sans', sans-serif;
+}
+/* Reset*/
+
+*{
+    margin: 0;/*zera a margem*/
+    padding: 0;/*zera o padding*/
+    box-sizing: border-box;
+    color: #000;/*colocara a cor da fonte em preto*/
+}
+img{
+    max-width: 100%;/*coloca um limite para a imagem, que neste caso, sera o tamanho mazimo da tela*/
+}
+a{
+    text-decoration: none;/*tira o estilo padrao dos links*/
+}
+ul{
+    list-style: none;/*tira os pontinhos da lista criada*/
+}
+html{
+    scroll-behavior: smooth;/*para o scrow do mouse descer suavemente para as ancoras*/
+}
+/*cabecalho*/
+
+.cabecalho .logo .imagem{
+    width: 100px;
+    ;
+}
+.cabecalho{
+    display: flex;/*para alinhar os itens do container de forma horizontal*/
+    justify-content: space-between;/*para a ceparacao dos itens do container*/
+    align-items: center;
+    padding: 25px 0;/*espacamento do padding top e paddind botton*/
+    max-width: 1170px;/* valor de tela de notebook*/
+    margin: 0 auto;/*centralizara o grupo e deixara ele no meio da pagina*/
+    flex-wrap: wrap;
+}
+@media (max-width: 642px){
+    .cabecalho{
+    justify-content:center;
+    }
+    .cabecalho .logo{
+        margin-bottom: 30px;
+    }
+    .cabecalho .menu .item a{
+        font-size: calc(0.6em + 1vw);
+    }
+}
+ .logo{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+.cabecalho .titulo{
+     margin-left: 7px;/*esta dando um espacamento entre o titulo do site e a logo*/
+     font-size: 17px;/*tamanho de fonte*/
+     transition: 0.3s ease-in-out; /*deixara com uma transicao do link pesonalizada*/
+    font-weight: 800;/*Deixa a fonte mais grosssa*/
+}
+.cabecalho .titulo:hover{/*definir oque vai acontecer quando o cursor passar por cima*/
+    color: #1ed760; 
+
+}
+.cabecalho .navegacao .menu{/*Esta deixando os itens da margem alinhada horizontalmente*/
+    display: flex;
+}
+.cabecalho .navegacao .menu .item{
+    margin: 10px;
+}
+.cabecalho .navegacao .menu .item a{
+    padding: 15px;
+    transition: 0.3 ease-in-out;
+}
+.cabecalho .navegacao .menu .item a:hover{/*definir oque vai acontecer quando o cursor passar por cima*/
+    background-color: #1ed760;
+    color: #fff;
+    border-radius: 100px;/*Deixa os cantos arredondados*/
+}
+/*Painel*/
+
+.conteudo-principal .paineis{
+    display: flex;
+    justify-content: center;/*joga para o meio da pagina*/
+    align-items: center;
+    height: 700px;
+    position: relative;/*Nao tao usado, para permitir posicionar um elemtento relatico*/
+}
+@media(max-width:900px){
+    .conteudo-principal .paineis{
+        height: 500px;
+    }
+    .conteudo-principal .paineis .btn-voltar{
+        left: 20px;
+        transform: rotate(180deg)
+    }
+    
+}
+
+.conteudo-principal .paineis .titulo{
+    font-size: calc(1em + 1vw);
+    color: #fff;
+    text-transform: uppercase;
+}
+.conteudo-principal .paineis .seta{
+background: url(../img/seta.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+width: 50px;
+position: absolute;
+text-indent: 100%;
+overflow: hidden;
+}
+.conteudo-principal .paineis .btn-voltar{/*quando tem duas classe no mesmo elemento usa-se sem o espacamento no css*/
+    left: 20px;
+    transform: rotate(180deg);
+}
+.conteudo-principal .paineis .btn-avancar{
+    right: 20px;
+}
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.conteudo-principal .paineis .projeto1{
+    background-image: url(../img/painel1.jpg);
+}
+.conteudo-principal .paineis .projeto2{
+    background-image: url(../img/painel2.jpg);
+}
+.conteudo-principal .paineis .projeto3{
+    background-image: url(../img/painel3.jpg);
+}
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+/*Sobre nos*/
+.sobre-nos{
+    background-color: #2a334d;
+}
+.sobre-nos .conteudo{
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+@media(max-width:1200px){
+    .sobre-nos .conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 10px;
+    }
+    .sobre-nos .conteudo .imagem{
+        display:none;
+    }
+    .sobre-nos .conteudo .informacoes{
+
+    }
+}
+.sobre-nos .conteudo .informacoes{
+    width: 40%;
+}
+.sobre-nos .conteudo .imagem{
+    width: 60%;
+}
+
+.sobre-nos .conteudo .informacoes .titulo{
+    font-size: 50px;
+    color: #1ed760;
+    margin-bottom: 20px;
+}
+.sobre-nos .conteudo .informacoes .texto{
+    color: #fff;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+@media(max-width:1200px){
+    .sobre-nos .conteudo{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 10px;
+    }
+    .sobre-nos .conteudo .imagem{
+        display:none;
+    }
+    .sobre-nos .conteudo .informacoes{
+
+    }
+}
+.sobre-nos .conteudo .informacoes{
+    width: 100%;
+}
+/*Footer*/
+.rodape{
+    padding: 80px 0 20px 0;
+    
+}
+.rodape .navegacao{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rodape .redes-sociais{
+    display: flex;
+}
+.rodape .redes-sociais a{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 20px;
+    width:70px;
+    transition: 0,3s ease-in-out;
+}
+.rodape .redes-sociais a:hover{
+    background-color: #1ed760;
+}    
+.rodape .navegacao .logo{
+    margin-left: 7px;/*esta dando um espacamento entre o titulo do site e a logo*/
+     font-size: 17px;/*tamanho de fonte*/
+     transition: 0.3s ease-in-out; /*deixara com uma transicao do link pesonalizada*/
+    font-weight: 800;
+    transition: 0.3 ease-in-out;
+}
+.rodape .navegacao .logo:hover{
+    color: #1ed760;
+}
+.rodape .navegacao .logo .imagem{
+    width: 100px;
+}
+.rodape .copyright{
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 400;
+}
+@media(max-width:940px){
+    .rodape .navegacao{
+    justify-content: center;
+    }
+    .rodape .navegacao .logo{
+        margin-bottom: 30px;
+        align-items: center;
+    }
+}
