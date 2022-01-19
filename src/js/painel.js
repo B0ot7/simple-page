@@ -1,21 +1,3 @@
-/*  quando clicar a seta temos q esconder
- todas as imagens e mostrar a proxia
- 
-    
-
-    Esconder as imag todas as imagens
-
-    pegar todas as imagens usando o Dom e 
-remover a classe mostrar
-
-     mostrar a proxima imagem
-     pegar totas as imagens, descobrir qual
- e a proxima, e colocar a classe mostrar nela
-
- */
-
-/*o comando "const" e um comando para definir q a variavel nao pode ter seu valor modificad*/
-
 const imagensPainel = document.querySelectorAll(".imagem-painel");
 const setaAvancar = document.getElementById("btn-avancar");
 const setaVoltar = document.getElementById("btn-voltar");
